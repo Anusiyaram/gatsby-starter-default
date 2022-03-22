@@ -33,40 +33,40 @@ function Slick() {
               <div className="img-card">
                 <img className="img" src={img1} alt="description" />
                 <div class="card-body">
-                  <div className="card-title">title</div>
-                  <div className="card-text">text</div>
+                  <div className="card-title">Class I to V</div>
+                  <div className="card-text">Lorem Ipsum</div>
                 </div>
               </div>
 
               <div className="img-card">
                 <img className="img" src={img2} alt="description" />
                 <div class="card-body">
-                  <div className="card-title">title</div>
-                  <div className="card-text">text</div>
+                  <div className="card-title">Class VI</div>
+                  <div className="card-text">Lorem Ipsum</div>
                 </div>
               </div>
 
               <div className="img-card">
                 <img className="img" src={img3} alt="description" />
                 <div class="card-body">
-                  <div className="card-title">title</div>
-                  <div className="card-text">text</div>
+                  <div className="card-title">Class VII</div>
+                  <div className="card-text">Lorem Ipsum</div>
                 </div>
               </div>
 
               <div className="img-card">
                 <img className="img" src={img4} alt="description" />
                 <div class="card-body">
-                  <div className="card-title">title</div>
-                  <div className="card-text">text</div>
+                  <div className="card-title">Class VIII</div>
+                  <div className="card-text">Lorem Ipsum</div>
                 </div>
               </div>
 
               <div className="img-card">
                 <img className="img" src={img5} alt="description" />
                 <div class="card-body">
-                  <div className="card-title">title</div>
-                  <div className="card-text">text</div>
+                  <div className="card-title">Class IX</div>
+                  <div className="card-text">Lorem Ipsum</div>
                 </div>
               </div>                                          
         

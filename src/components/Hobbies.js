@@ -5,6 +5,13 @@ import Slider from "react-slick"
 // Import css files
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import img from "../images/Hobbie.jpg"
+import img1 from "../images/Hobbie1.jpg"
+import img2 from "../images/Hobbie2.jpg"
+import img3 from "../images/Hobbie3.jpg"
+import img4 from "../images/Hobbie4.jpg"
+import img5 from "../images/Hobbie5.jpg"
+import img6 from "../images/Hobbie6.jpg"
 
 function Hobbies() {
   const config = {
@@ -17,44 +24,6 @@ function Hobbies() {
 
   const [settings, setSettings] = useState(config)
 
-  const products = [
-    {
-      img: "/images/Hobbie.jpg",
-      title: "Singing",
-      text: "Lorem ipsum dolor sit amet elit.",
-    },
-    {
-      img: "/images/Hobbie1.jpg",
-      title: "Like Nature",
-      text: "Lorem Ipsum adipiscing elit ipsum.",
-    },
-    {
-      img: "/images/Hobbie2.jpg",
-      title: "Grow Plants",
-      text: "Orci porta non pulvinar neque laoreet.",
-    },
-    {
-      img: "/images/Hobbie3.jpg",
-      title: "Photography",
-      text: "Bibendum neque egestas congue quisque.",
-    },
-    {
-      img: "/images/Hobbie4.jpg",
-      title: "Guitar",
-      text: "Mattis rhoncus urna neque viverra justo.",
-    },
-    {
-      img: "/images/Hobbie5.jpg",
-      title: "Yoga",
-      text: "Mattis rhoncus urna neque viverra justo.",
-    },
-    {
-      img: "/images/Hobbie6.jpg",
-      title: "Swimming",
-      text: "Mattis rhoncus urna neque viverra justo.",
-    },
-  ]
-
   return (
     <div className="App mt-100">
       <div className="container">
@@ -63,17 +32,62 @@ function Hobbies() {
           Search your Categories opportunity with our categories
         </p>
         <Slider {...settings}>
-          {products.map((x, i) => {
-            return (
-              <div key={i} className="img-card">
-                <img className="img" src={x.img} alt="description" />
+              <div className="img-card">
+                <img className="img" src={img} alt="description" />
                 <div class="card-body">
-                  <div className="card-title">{x.title}</div>
-                  <div className="card-text">{x.text}</div>
+                  <div className="card-title">Singing</div>
+                  <div className="card-text">Lorem Ipsum</div>
                 </div>
               </div>
-            )
-          })}
+
+              <div className="img-card">
+                <img className="img" src={img1} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">Like Nature</div>
+                  <div className="card-text">Lorem Ipsum</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img2} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">Grow Plants</div>
+                  <div className="card-text">Lorem Ipsum</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img3} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">Photography</div>
+                  <div className="card-text">Lorem Ipsum</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img4} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">Guitar</div>
+                  <div className="card-text">Lorem Ipsum</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img5} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">Yoga</div>
+                  <div className="card-text">Lorem Ipsum</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img6} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">Swimming</div>
+                  <div className="card-text">Lorem Ipsum</div>
+                </div>
+              </div>
+
         </Slider>
       </div>
     </div>

@@ -5,6 +5,11 @@ import Slider from "react-slick"
 // Import css files
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import img1 from "../images/image1.jpg"
+import img2 from "../images/image2.jpg"
+import img3 from "../images/image3.jpg"
+import img4 from "../images/image4.jpg"
+import img5 from "../images/image5.jpg"
 
 function Slick() {
   const config = {
@@ -17,34 +22,6 @@ function Slick() {
 
   const [settings, setSettings] = useState(config)
 
-  const products = [
-    {
-      img: "/images/image1.jpg",
-      title: "Class I to V std",
-      text: "Lorem ipsum dolor sit amet elit.",
-    },
-    {
-      img: "/images/image2.jpg",
-      title: "Class VI std",
-      text: "Lorem Ipsum adipiscing elit ipsum.",
-    },
-    {
-      img: "/images/image3.jpg",
-      title: "Class VII std",
-      text: "Orci porta non pulvinar neque laoreet.",
-    },
-    {
-      img: "/images/image4.jpg",
-      title: "Class VIII std",
-      text: "Bibendum neque egestas congue quisque.",
-    },
-    {
-      img: "/images/image5.jpg",
-      title: "Class XI std",
-      text: "Mattis rhoncus urna neque viverra justo.",
-    },
-  ]
-
   return (
     <div className="App mt-100">
       <div className="container">
@@ -53,17 +30,46 @@ function Slick() {
           Search your Categories opportunity with our categories
         </p>
         <Slider {...settings}>
-          {products.map((x, i) => {
-            return (
-              <div key={i} className="img-card">
-                <img className="img" src={x.img} alt="description" />
+              <div className="img-card">
+                <img className="img" src={img1} alt="description" />
                 <div class="card-body">
-                  <div className="card-title">{x.title}</div>
-                  <div className="card-text">{x.text}</div>
+                  <div className="card-title">title</div>
+                  <div className="card-text">text</div>
                 </div>
               </div>
-            )
-          })}
+
+              <div className="img-card">
+                <img className="img" src={img2} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">title</div>
+                  <div className="card-text">text</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img3} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">title</div>
+                  <div className="card-text">text</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img4} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">title</div>
+                  <div className="card-text">text</div>
+                </div>
+              </div>
+
+              <div className="img-card">
+                <img className="img" src={img5} alt="description" />
+                <div class="card-body">
+                  <div className="card-title">title</div>
+                  <div className="card-text">text</div>
+                </div>
+              </div>                                          
+        
         </Slider>
       </div>
     </div>

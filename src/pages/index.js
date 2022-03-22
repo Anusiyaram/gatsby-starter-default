@@ -9,10 +9,10 @@ import Hobbies from "../components/Hobbies"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-        <Banner />
-        <Slick />
-        <Languages />
-        <Hobbies />
+    <Banner />
+    <Slick />
+    <Languages />
+    <Hobbies />
   </Layout>
 )
 

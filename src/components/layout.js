@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import './Bootstrap.min.css';
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -31,11 +32,12 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginTop: `2rem`,
+            textAlign: 'center',
           }}
         >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="#">Veda Mandir Academy </a>
         </footer>
       </div>
     </>

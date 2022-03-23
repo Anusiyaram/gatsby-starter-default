@@ -9,10 +9,14 @@ export default class Div extends React.Component {
   }
 
   listenScrollEvent = e => {
-    if (window.scrollY > 60) {
+    if (window.scrollY > 120) {
+      console.log('IF' + window.scrollY);
       this.setState({ backgroundColor: "white" })
+      console.log(this.state.backgroundColor);
     } else {
-      this.setState({ backgroundColor: "none" })
+      console.log('ELSE'+ window.scrollY);
+      this.setState({ backgroundColor: 'transparent' })
+      console.log(this.state.backgroundColor);
     }
   }
 
@@ -205,15 +209,15 @@ export default class Div extends React.Component {
                   >
                     Online Classes
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">
+                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a className="dropdown-item" href="#">
                       Action
                     </a>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another action
                     </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="#">
                       Something else here
                     </a>
                   </div>

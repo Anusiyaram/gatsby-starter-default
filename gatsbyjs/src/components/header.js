@@ -6,17 +6,20 @@ import "font-awesome/css/font-awesome.min.css"
 export default class Div extends React.Component {
   state = {
     backgroundColor: "none",
+    textColor: "none",
   }
 
   listenScrollEvent = e => {
     if (window.scrollY > 120) {
       console.log('IF' + window.scrollY);
-      this.setState({ backgroundColor: "white" })
-      console.log(this.state.backgroundColor);
+      this.setState({ backgroundColor: "white", textColor: "black" })
+      console.log('-->'+this.state.textColor);
+      console.log('-->'+this.state.backgroundColor);
     } else {
       console.log('ELSE'+ window.scrollY);
-      this.setState({ backgroundColor: 'transparent' })
-      console.log(this.state.backgroundColor);
+      this.setState({ backgroundColor: 'transparent', textColor: "white" })
+      console.log('>>>>>'+this.state.textColor);
+      console.log('>>>>>'+this.state.backgroundColor);
     }
   }
 
@@ -28,7 +31,7 @@ export default class Div extends React.Component {
     return (
       <header
         className="header fixed-top"
-        style={{ backgroundColor: this.state.backgroundColor }}
+        style={{ backgroundColor: this.state.backgroundColor, color: this.state.textColor }}
       >
         <div className="container">
           <div className="header-container">
@@ -200,7 +203,6 @@ export default class Div extends React.Component {
                   <a
                     href="#"
                     className="nav-link dropdown-toggle"
-                    href="#"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -358,16 +360,16 @@ export default class Div extends React.Component {
               <a
                 href="#"
                 className="btn rounded-pill nav-btn"
-                style={{ color: "#fff" }}
-              >
+                style={{ color: this.state.textColor }}
+                >
                 Sign Up
               </a>
               <a
                 className="btn rounded-pill user-nav-trigger on-light"
+                style={{ color: this.state.textColor }}
                 data-bs-toggle="modal"
                 href="#"
                 role="button"
-                style={{ color: "#fff" }}
               >
                 Sign in
               </a>

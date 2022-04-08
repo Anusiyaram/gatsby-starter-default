@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="#">Veda Mandir Academy </a>
+          <a href="#">Veda Mandir Academy</a>
         </footer>
       </div>
     </>

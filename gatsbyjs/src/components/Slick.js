@@ -1,9 +1,7 @@
 import React from "react"
-
 import Slide from "../components/Slider"
 
 const Slick = ({ data }) => {
-
 
   return (
     <div className="App mt-100">

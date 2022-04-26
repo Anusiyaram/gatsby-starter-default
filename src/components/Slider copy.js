@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import Slider from "react-slick"
 import './Bootstrap.min.css';
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import Image from "../components/Imgurl"
 import { StaticQuery, graphql } from "gatsby"
 
 export default function Slide() {
@@ -54,12 +55,10 @@ export default function Slide() {
                     Image {
                       id
                       localFile {
-                      childImageSharp {
-                        fluid {
-                          ...GatsbyImageSharpFluid
+                        childImageSharp {
+                          gatsbyImageData(layout: FIXED)
                         }
                       }
-                    }
                     }
                     Title
                     Content
@@ -72,7 +71,9 @@ export default function Slide() {
         <Slider {...settings}>
         {data.allStrapiArticle.edges.map(document => (
               <div className="img-card" key={document.node.id}>
-                <Img className="img" fixed={document.node.Image.localFile.childImageSharp.fluid} alt="" />
+                <Image alt="Post Image"
+                className="rounded-t-md border-gray-200  border-b"
+                image={document.node.Image} />
                 <div class="card-body">
                   <div className="card-title">{document.node.Title}</div>
                   <div className="card-text">{document.node.Content}</div>

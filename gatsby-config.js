@@ -23,7 +23,9 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
+        apiURL: process.env.DEPLOY_URL
+          ? "https://strapi-gatsby-postgresql-pro.herokuapp.com"
+          : "http://localhost:1337",
         collectionTypes: ["article", "category"],
         queryLimit: 1000,
       },
@@ -44,6 +46,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve:`gatsby-source-cloudinary`,
+      options: {
+      cloudName: `dzrqpbrpv`,
+      apiKey: `316115841284142`,
+      apiSecret: `btuLMK4xsgi3OUNdlwRJXRlDJPQ`,
+      resourceType: `image`,
+      type: ``,
+      prefix: `gatsby-source-cloudinary/`
+      }
+  },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     //`gatsby-plugin-offline`,
